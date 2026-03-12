@@ -119,3 +119,7 @@ C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\obj\De
 C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\obj\Debug\WindowsF.EA766B00.Up2Date
 C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\bin\Debug\itextsharp.dll
+C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Viktor M. Mihaylov\Documents\GitHub\Varna-Coach\WindowsFormsApp2\bin\Debug\itextsharp.xml

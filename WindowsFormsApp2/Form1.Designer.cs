@@ -62,10 +62,13 @@
         private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnBuy;
+        private System.Windows.Forms.Button btnDeleteTicket;
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) components.Dispose();
+            if (disposing && (components != null))
+                components.Dispose();
+
             base.Dispose(disposing);
         }
 
@@ -113,6 +116,7 @@
             this.btnPdf = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnBuy = new System.Windows.Forms.Button();
+            this.btnDeleteTicket = new System.Windows.Forms.Button();
             this.footer = new System.Windows.Forms.Panel();
             this.lblPrice = new System.Windows.Forms.Label();
             this.footerLine = new System.Windows.Forms.Panel();
@@ -234,6 +238,7 @@
             // cmbFrom
             // 
             this.cmbFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFrom.FormattingEnabled = true;
             this.cmbFrom.Location = new System.Drawing.Point(0, 84);
             this.cmbFrom.Name = "cmbFrom";
             this.cmbFrom.Size = new System.Drawing.Size(320, 21);
@@ -252,6 +257,7 @@
             // cmbTo
             // 
             this.cmbTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTo.FormattingEnabled = true;
             this.cmbTo.Location = new System.Drawing.Point(360, 84);
             this.cmbTo.Name = "cmbTo";
             this.cmbTo.Size = new System.Drawing.Size(320, 21);
@@ -282,6 +288,7 @@
             this.chkStudent.Size = new System.Drawing.Size(95, 17);
             this.chkStudent.TabIndex = 7;
             this.chkStudent.Text = "Ученик (-30%)";
+            this.chkStudent.UseVisualStyleBackColor = true;
             // 
             // chkPensioner
             // 
@@ -291,6 +298,7 @@
             this.chkPensioner.Size = new System.Drawing.Size(114, 17);
             this.chkPensioner.TabIndex = 8;
             this.chkPensioner.Text = "Пенсионер (-50%)";
+            this.chkPensioner.UseVisualStyleBackColor = true;
             // 
             // btnNext1
             // 
@@ -342,8 +350,8 @@
             // 
             // btnBack2
             // 
-            this.btnBack2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnBack2.FlatAppearance.BorderSize = 0;
+            this.btnBack2.BackColor = System.Drawing.Color.White;
+            this.btnBack2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnBack2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnBack2.Location = new System.Drawing.Point(0, 314);
@@ -431,8 +439,8 @@
             // 
             // btnBack3
             // 
-            this.btnBack3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnBack3.FlatAppearance.BorderSize = 0;
+            this.btnBack3.BackColor = System.Drawing.Color.White;
+            this.btnBack3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnBack3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnBack3.Location = new System.Drawing.Point(0, 360);
@@ -470,6 +478,7 @@
             this.step4.Controls.Add(this.btnPdf);
             this.step4.Controls.Add(this.btnPrint);
             this.step4.Controls.Add(this.btnBuy);
+            this.step4.Controls.Add(this.btnDeleteTicket);
             this.step4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.step4.Location = new System.Drawing.Point(24, 0);
             this.step4.Name = "step4";
@@ -493,14 +502,14 @@
             this.lblSummary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.lblSummary.Location = new System.Drawing.Point(0, 56);
             this.lblSummary.Name = "lblSummary";
-            this.lblSummary.Size = new System.Drawing.Size(740, 130);
+            this.lblSummary.Size = new System.Drawing.Size(740, 150);
             this.lblSummary.TabIndex = 1;
             this.lblSummary.Text = "—";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(0, 200);
+            this.lblFirstName.Location = new System.Drawing.Point(0, 220);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(29, 13);
             this.lblFirstName.TabIndex = 2;
@@ -509,7 +518,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(260, 200);
+            this.lblLastName.Location = new System.Drawing.Point(260, 220);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(55, 13);
             this.lblLastName.TabIndex = 3;
@@ -518,7 +527,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(520, 200);
+            this.lblEmail.Location = new System.Drawing.Point(520, 220);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(39, 13);
             this.lblEmail.TabIndex = 4;
@@ -526,29 +535,29 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(0, 220);
+            this.txtFirstName.Location = new System.Drawing.Point(0, 240);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(220, 20);
             this.txtFirstName.TabIndex = 5;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(260, 220);
+            this.txtLastName.Location = new System.Drawing.Point(260, 240);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(220, 20);
             this.txtLastName.TabIndex = 6;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(520, 220);
+            this.txtEmail.Location = new System.Drawing.Point(520, 240);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(220, 20);
             this.txtEmail.TabIndex = 7;
             // 
             // btnBack4
             // 
-            this.btnBack4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.btnBack4.FlatAppearance.BorderSize = 0;
+            this.btnBack4.BackColor = System.Drawing.Color.White;
+            this.btnBack4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnBack4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnBack4.Location = new System.Drawing.Point(0, 300);
@@ -560,25 +569,31 @@
             // 
             // btnPdf
             // 
-            this.btnPdf.BackColor = System.Drawing.Color.White;
+            this.btnPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPdf.FlatAppearance.BorderSize = 0;
             this.btnPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPdf.ForeColor = System.Drawing.Color.White;
             this.btnPdf.Location = new System.Drawing.Point(140, 300);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(140, 44);
             this.btnPdf.TabIndex = 9;
-            this.btnPdf.Text = "Запази PDF";
+            this.btnPdf.Text = "Изтегли PDF";
             this.btnPdf.UseVisualStyleBackColor = false;
+            this.btnPdf.Visible = false;
             // 
             // btnPrint
             // 
-            this.btnPrint.BackColor = System.Drawing.Color.White;
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Location = new System.Drawing.Point(300, 300);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(140, 44);
             this.btnPrint.TabIndex = 10;
             this.btnPrint.Text = "Принтирай";
             this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Visible = false;
             // 
             // btnBuy
             // 
@@ -586,12 +601,26 @@
             this.btnBuy.FlatAppearance.BorderSize = 0;
             this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuy.ForeColor = System.Drawing.Color.White;
-            this.btnBuy.Location = new System.Drawing.Point(460, 300);
+            this.btnBuy.Location = new System.Drawing.Point(160, 300);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(220, 44);
             this.btnBuy.TabIndex = 11;
             this.btnBuy.Text = "Купи билет";
             this.btnBuy.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteTicket
+            // 
+            this.btnDeleteTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteTicket.FlatAppearance.BorderSize = 0;
+            this.btnDeleteTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteTicket.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteTicket.Location = new System.Drawing.Point(460, 300);
+            this.btnDeleteTicket.Name = "btnDeleteTicket";
+            this.btnDeleteTicket.Size = new System.Drawing.Size(180, 44);
+            this.btnDeleteTicket.TabIndex = 12;
+            this.btnDeleteTicket.Text = "Изтрий билет";
+            this.btnDeleteTicket.UseVisualStyleBackColor = false;
+            this.btnDeleteTicket.Visible = false;
             // 
             // footer
             // 
@@ -611,9 +640,9 @@
             this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.lblPrice.Location = new System.Drawing.Point(24, 18);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(113, 21);
+            this.lblPrice.Size = new System.Drawing.Size(129, 32);
             this.lblPrice.TabIndex = 0;
-            this.lblPrice.Text = "Цена: 0.00 лв.";
+            this.lblPrice.Text = "Цена: 0.00 €";
             // 
             // footerLine
             // 
@@ -699,7 +728,6 @@
             this.cardHeader.PerformLayout();
             this.progressTrack.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
     }
 }
